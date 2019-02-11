@@ -5,7 +5,7 @@ function contactHTML(array) {
             <h2>Name: ${contact.name}</h2>
             <h4>Phone: ${contact.phoneNum}</h4>
             <h4>Address: ${contact.address}</h4>
-        </div>
+            <button id="delete--${contact.id}">Forget This Fool</button>
         `
     }).join("")
     return contactHTML

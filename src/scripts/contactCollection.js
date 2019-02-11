@@ -19,6 +19,20 @@ const contactManager = {
         return fetch(`http://127.0.0.1:8088/contacts/${id}`, {
             method: "DELETE"
         })
+    },
+    EDITGET: function (id) {
+        return fetch(`http://localhost:8088/contacts/${id}`)
+            .then(response => response.json())
+    },
+    EDITPOST: function (id, updatedContactObj) {
+        return fetch(`http://127.0.0.1:8088/contacts/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedContactObj)
+        })
+            .then(res => res.json())
     }
 }
 

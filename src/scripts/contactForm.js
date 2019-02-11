@@ -1,5 +1,6 @@
 function contactForm() {
     document.querySelector("#contactForm").innerHTML = `
+    <input type="hidden" id="contactToEdit" value="0">
     <fieldset>
         <label for="">Contact Name</label>
         <input type="text" name="newName" id="newName"></input>
@@ -12,7 +13,7 @@ function contactForm() {
         <label for="">Contact Address</label>
         <input type="text" name="newAddress" id="newAddress"></input>
     </fieldset>
-    <button id="saveButton">Save New Contact</button>
+    <button id="submitButton">Save New Contact</button>
     `
 }
 

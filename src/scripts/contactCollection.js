@@ -14,6 +14,11 @@ const contactManager = {
             },
             body: JSON.stringify(newObj)
         })
+    },
+    DELETE: function (id) {
+        return fetch(`http://127.0.0.1:8088/contacts/${id}`, {
+            method: "DELETE"
+        })
     }
 }
 
